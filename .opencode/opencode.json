@@ -1,0 +1,48 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "write": true,
+    "bash": false
+  },
+  "permission": {
+    "skill": "allow"
+  },
+  "provider": {
+    "ollama_ONE": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama-mac-1",
+      "options": {
+        "baseURL": "http://192.168.10.199:11434/v1"
+      },
+      "models": {
+        "qwen3-coder:30b": {
+          "name": "Qwen3-Coder 30B",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        },
+        "deepseek-r1:8b": {
+          "name": "DeepSeek R1 8B"
+        }
+      }
+    },
+
+    "ollama_TWO": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama-mac-2",
+      "options": {
+        "baseURL": "http://192.168.10.17:11434/v1"
+      },
+      "models": {
+        "qwen3-coder-next": {
+          "name": "Qwen3-Coder-Next",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        }
+      }
+    }
+  }
+}
